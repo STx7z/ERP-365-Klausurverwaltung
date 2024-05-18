@@ -29,6 +29,10 @@ page 50106 Klausurergebnisse
                 field("Note"; Rec.Note)
                 {
                     ApplicationArea = All;
+                    trigger OnValidate()
+                    begin
+                        KlausurnotenBedingung.KlausurnotenBedingung(Rec."Prüfungsnummer", Rec.Matrikelnummer, Rec.Note);
+                    end;
 
                 }
             }
@@ -52,5 +56,5 @@ page 50106 Klausurergebnisse
     }
 
     var
-        myInt: Integer;
+        KlausurnotenBedingung: Codeunit KlausurnotenBedingung;
 }

@@ -31,6 +31,7 @@ page 50107 "Studentenliste"
                     ApplicationArea = All;
 
                 }
+
             }
         }
         area(Factboxes)
